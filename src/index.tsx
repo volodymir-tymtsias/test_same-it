@@ -7,10 +7,12 @@ import './normalize.css';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#87bfff'
+      main: '#87bfff',
+      dark: '#160c28',
     },
     secondary: {
-      main: '#f6d371'
+      main: '#f2c33f',
+      light: '#f6d371',
     },
   }
 });
