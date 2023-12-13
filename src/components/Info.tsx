@@ -7,6 +7,7 @@ export const Info = () => {
         width: {md: '70%' },
         backgroundColor: 'secondary.light'
       }}
+      component="section"
     >
         <Typography variant="body1" mb={1}>
           <b>Статус доставки: </b>

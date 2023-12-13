@@ -1,8 +1,17 @@
 import React from "react";
+import { Link as RouterLink } from 'react-router-dom';
 import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 
-const pages = ['Перевірити ТТН', 'Список відділень'];
+const pages = [{
+    link: '/',
+    value: 'Перевірити ТТН',
+  }, 
+  {
+    link: 'listBranch',
+    value: 'Список відділень',
+  },
+];
 
 export const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -19,11 +28,9 @@ export const Header = () => {
     <AppBar position="static" sx={{ mb: 2 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
+          <Button
+            component={RouterLink} 
+            to="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -35,7 +42,7 @@ export const Header = () => {
             }}
           >
             LOGO
-          </Typography>
+          </Button>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -67,22 +74,26 @@ export const Header = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem 
+                  key={page.value} 
+                  onClick={handleCloseNavMenu}
+                  component={RouterLink} 
+                  to={page.link}
+                >
+                  <Typography textAlign="center">{page.value}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
+          <Button
+            component={RouterLink} 
+            to="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
+              justifyContent: 'flex-start',
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -91,16 +102,18 @@ export const Header = () => {
             }}
           >
             LOGO
-          </Typography>
+          </Button>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.value}
                 onClick={handleCloseNavMenu}
+                component={RouterLink} 
+                to={page.link}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.value}
               </Button>
             ))}
           </Box>

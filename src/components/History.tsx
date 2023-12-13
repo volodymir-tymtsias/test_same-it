@@ -8,6 +8,7 @@ export const History = () => {
         width: { md: '30%' },
         backgroundColor: 'secondary.light',
       }}
+      component="section"
     >
       <Typography variant="h6" sx={{ textAlign: 'center' }}>Історія</Typography>
       <Divider />

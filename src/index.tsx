@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { ThemeProvider, createTheme } from '@mui/material';
 import './normalize.css';
+import { HashRouter as Router } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -24,7 +25,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </ThemeProvider>
   </React.StrictMode>
 );

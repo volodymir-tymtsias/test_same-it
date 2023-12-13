@@ -5,7 +5,7 @@ import { History } from "../components/History";
 export const HomePage = () => {
   return (
     <Container maxWidth="xl">
-      <Paper sx={{ p: 1 }}>
+      <Paper sx={{ p: 1 }} component="main">
         <Box
           component="form"
           sx={{
