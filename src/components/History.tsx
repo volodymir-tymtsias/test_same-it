@@ -10,7 +10,7 @@ export const History = () => {
       }}
       component="section"
     >
-      <Typography variant="h6" sx={{ textAlign: 'center' }}>Історія</Typography>
+      <Typography variant="h6" sx={{ textAlign: 'center' }}>Історія пошуку</Typography>
       <Divider />
       <MenuList dense>
         <MenuItem>

@@ -15,7 +15,19 @@ const theme = createTheme({
       main: '#f2c33f',
       light: '#f6d371',
     },
-  }
+  },
+  components: {
+    // Name of the component
+    MuiTablePagination: {
+      styleOverrides: {
+        toolbar: {
+          // Some CSS
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+        },
+      },
+    },
+  },
 });
 
 const root = ReactDOM.createRoot(
