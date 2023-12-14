@@ -1,4 +1,4 @@
-# Test Task Same IT
+# Додаток для пошуку актуального статусу місцезнаходження посилки за номером накладної та отримання списку відділень Нової пошти
 
 The following technologies and libraries were used during creation:
 - JavaScript
@@ -6,7 +6,7 @@ The following technologies and libraries were used during creation:
 -	React
 -	React Router
 -	Redux ToolKit
-- Bulma
+- Material UI
 
 ---
 #### [DEMO LINK](https://volodymir-tymtsias.github.io/test_same-it/)
