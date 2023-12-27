@@ -1,15 +1,21 @@
 import { Department } from "./Department";
+import { StatusDocument } from "./StatusDocument";
 
 export interface Response {
   success: boolean;
-  data: Department[];
   errors: string[];
   warnings: string[];
+}
+
+export interface ResponseDepartments extends Response{
+  data: Department[];
   info: {
     totalCount: number;
   },
-  messageCodes: [];
-  errorCodes: [];
-  warningCodes: [];
-  infoCodes: [];
 }
+
+export interface ResponseStatusDocument extends Response{
+  data: StatusDocument[];
+}
+
+

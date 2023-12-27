@@ -1,5 +1,5 @@
 import { DataFetchDepartment } from "../types/DataFetchDepartment";
-import { Response } from "../types/Response";
+import { ResponseDepartments } from "../types/Response";
 import { client } from "./fetchClient";
 
 export const getDepartments = (data: DataFetchDepartment) => {
@@ -13,5 +13,5 @@ export const getDepartments = (data: DataFetchDepartment) => {
     }
   };
 
-  return client.post<Response>('', newData);
+  return client.post<ResponseDepartments>('', newData);
 };

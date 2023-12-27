@@ -10,7 +10,7 @@ import { ScrollToTop } from "../components/ScrollToTop";
 
 export const ListPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const appliedQuery = searchParams.get('q')?.trim() || '';
+  const appliedQuery = searchParams.get('city') || '';
   const page = searchParams.get('page') || 1;
   const pageSize = searchParams.get('pageSize') || 5;
   const [query, setQuery] = useState(appliedQuery);
@@ -27,14 +27,19 @@ export const ListPage = () => {
     responseErrors,
     responseWarnings,
   } = useAppSelector(state => state.departments);
+  
 
   const setQuerySearchParams = () => {
     setSearchParams(
-      getSearchWith(searchParams, { q: query.trim() || null, page: 1 }),
+      getSearchWith(searchParams, { 
+        city: query.trim() || null, 
+        page: 1,
+        pageSize: 5,
+      }),
     );
   }
 
-  const searchHandler = (
+  const searchInputHandler = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setQuery(event.target.value);
@@ -70,7 +75,7 @@ export const ListPage = () => {
                 width: { xs: '100%', sm: '30%', lg: '20%' },
               }}
               value={query}
-              onChange={searchHandler}
+              onChange={searchInputHandler}
             />
             <Button 
               variant="contained" 

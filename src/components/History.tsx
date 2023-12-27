@@ -15,19 +15,19 @@ export const History = () => {
       <MenuList dense>
         <MenuItem>
           <ListItemText>20400048799002</ListItemText>
-          <IconButton edge="end" aria-label="delete">
+          <IconButton edge="end" aria-label="delete" title="Видалити з історії">
             <DeleteIcon />
           </IconButton>
         </MenuItem>
         <MenuItem>
           <ListItemText>20400048799002</ListItemText>
-          <IconButton edge="end" aria-label="delete">
+          <IconButton edge="end" aria-label="delete" title="Видалити з історії">
             <DeleteIcon />
           </IconButton>
         </MenuItem>
         <MenuItem>
           <ListItemText>20400048799002</ListItemText>
-          <IconButton edge="end" aria-label="delete">
+          <IconButton edge="end" aria-label="delete" title="Видалити з історії">
             <DeleteIcon />
           </IconButton>
         </MenuItem>
