@@ -40,7 +40,11 @@ export const Info = () => {
         </Box>
       )}
 
-      {!loading && !!statusDocuments.length && statusDocuments[0].StatusCode === '3' && !hasError && (
+      {!loading 
+        && !!statusDocuments.length 
+        && statusDocuments[0].StatusCode === '3' 
+        && !hasError 
+        && trackingNumber && (
         <Alert severity="info">
           Номер TTH не знайдено
         </Alert>
@@ -53,13 +57,17 @@ export const Info = () => {
         </Alert>
       )}
 
-      {!loading && !statusDocuments.length && !hasError && (
+      {!loading && !trackingNumber && !hasError && (
         <Alert severity="info">
           Введіть номер ТТН для пошуку або виберіть ТТН з історії
         </Alert>
       )}
 
-      {!loading && !!statusDocuments.length && statusDocuments[0].StatusCode !== '3' && !hasError && (
+      {!loading 
+        && !!statusDocuments.length
+        && statusDocuments[0].StatusCode !== '3' 
+        && !hasError 
+        && trackingNumber && (
         <>
           <Typography variant="body1" mb={1}>
             <b>Статус доставки: </b>
