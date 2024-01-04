@@ -14,7 +14,7 @@ export const Info = () => {
     responseWarnings,
   } = useAppSelector(state => state.statusDocuments);
   const [searchParams] = useSearchParams();
-  const trackingNumber = searchParams.get('waybill');
+  const trackingNumber = searchParams.get('trackingNumber');
 
   useEffect(() => {
     if (trackingNumber) {
@@ -36,7 +36,7 @@ export const Info = () => {
 
       {loading && (
         <Box textAlign="center" width="100%">
-          <CircularProgress color="inherit" />
+          <CircularProgress color="inherit" sx={{ m: 2 }} />
         </Box>
       )}
 

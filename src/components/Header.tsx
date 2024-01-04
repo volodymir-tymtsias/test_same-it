@@ -8,7 +8,7 @@ const pages = [{
     value: 'Перевірити ТТН',
   }, 
   {
-    link: 'listBranch',
+    link: 'listDepartments',
     value: 'Список відділень',
   },
 ];

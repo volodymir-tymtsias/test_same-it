@@ -1,11 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import departmentsReducer from '../features/departments';
 import statusDocumentsReducer from '../features/statusDocuments';
+import historyReducer from '../features/history';
 
 export const store = configureStore({
   reducer: {
     departments: departmentsReducer,
     statusDocuments: statusDocumentsReducer,
+    history: historyReducer,
   },
 });
 
