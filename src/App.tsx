@@ -14,7 +14,7 @@ function App() {
           <Route index element={<HomePage />} />
         </Route>
         <Route path="home" element={<Navigate to="/" replace />} />
-        <Route path="listBranch" element={<ListPage />} />
+        <Route path="listDepartments" element={<ListPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>

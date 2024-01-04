@@ -8,7 +8,7 @@ const pages = [{
     value: 'Перевірити ТТН',
   }, 
   {
-    link: 'listBranch',
+    link: 'listDepartments',
     value: 'Список відділень',
   },
 ];
@@ -27,7 +27,7 @@ export const Header = () => {
   return (
     <AppBar position="static" sx={{ mb: 2 }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters id="back-to-top-anchor">
           <Button
             component={RouterLink} 
             to="/"

@@ -4,6 +4,8 @@ import App from './App';
 import { ThemeProvider, createTheme } from '@mui/material';
 import './normalize.css';
 import { HashRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 
 const theme = createTheme({
   palette: {
@@ -37,9 +39,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Router>
-        <App />
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>
 );
