@@ -4,11 +4,13 @@ import { TablePagination } from '@mui/material';
 import { getSearchWith } from '../helpers/searchHelper';
 import { useAppSelector } from '../app/hooks';
 
+const options = [5, 10, 25, 50, 100, 500];
+
 export const CustomTablePagination: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { amount } = useAppSelector(state => state.departments);
   const pageSize = searchParams.get('pageSize') || 5;
-  const rowsPerPage = ([5, 10, 25, 50, 100, 500].includes(+pageSize))
+  const rowsPerPage = (options.includes(+pageSize))
     ? +pageSize
     : 5;
 
@@ -36,7 +38,7 @@ export const CustomTablePagination: React.FC = () => {
 
   return (
     <TablePagination
-      rowsPerPageOptions={[5, 10, 25, 50, 100, 500]}
+      rowsPerPageOptions={options}
       labelRowsPerPage='Відділень на сторінці:'
       component="div"
       count={amount}

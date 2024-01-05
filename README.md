@@ -1,4 +1,4 @@
-## Додаток для пошуку актуального статусу місцезнаходження посилки за номером накладної та отримання списку відділень Нової пошти
+## Application for finding the current status of the location of the parcel by the invoice number and obtaining a list of Nova Poshta branches
 
 The following technologies and libraries were used during creation:
 - JavaScript
@@ -11,14 +11,13 @@ The following technologies and libraries were used during creation:
 ---
 #### [DEMO LINK](https://volodymir-tymtsias.github.io/test_same-it/)
 
-#### Функціонал додатку:
-- Користувач вводить номер ТТН або свій номер накладної в поле введення на головній сторінці. Після чого додаток відправляє запит на отримання даних про актуальний статус місця доставки товару.
-- Відповідно до отриманих даних додаток виводить інформацію про відправку користувачеві.
-- Користувач має можливість бачити всі попередні номери ТТН у вигляді списку історії. Навіть після перезавантаження сторінки.
-- По кліку на номер ТТН в історії пошуку, додаток автоматично виконує запит на статус знаходження
-доставки і виводить відповідну інформацію. При цьому номер ТТН автоматично відображається в полі
-введення.
-- Номер ТТН накладної перевіряється при введенні на коректність заповнення. При невірному форматі після натискання на кнопку отримати статус доставки ТТН, буде показана підказка і запит не відправлятиметься. 
-- Є можливість очистити всі старі ТТН з історії або ж видалити окремі ТТН.
-- Переходячи на другу вкладку, користувач має можливість побачити список відділень Нової пошти, отримані за допомогою запиту із сервера НП, розбитий на сторінки для зручності перегляду, з можливістю вибору кількості елементів на сторінці.
-- Користувач має можливість також отримати список відділень у потрібному населеному пункті, ввівши назву населеного пункту у формі пошуку на відповідній сторінці.
+#### Functionality of the application:
+- The user enters the tracking number in the input field on the main page. After that, the application sends a request to receive data about the current status of the parcel's delivery location.
+- According to the received data, the application displays information about sending to the user.
+- The user has the opportunity to see all previous tracking numbers in the form of a history list. Even after reloading the page.
+- By clicking on the tracking number in the search history, the application automatically performs a request for the status of finding
+delivery and displays the relevant information. In this case, the tracking number is automatically displayed in the input field.
+- The tracking number of the invoice is checked for correctness when entering. If the format is incorrect, after clicking the button to get the delivery status of the tracking number, a prompt will be displayed and the request will not be sent.
+- It is possible to clear all old tracking numbers from the history or delete an individual tracking number.
+- By switching to the second tab, the user has the opportunity to see the list of New Post offices obtained by means of a request from the NP server, divided into pages for ease of viewing, with the option of choosing the number of items on the page.
+- The user can also get a list of branches in the desired locality by entering the name of the locality in the search form on the corresponding page.

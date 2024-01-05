@@ -1,7 +1,19 @@
 import React from "react";
 import { Link as RouterLink } from 'react-router-dom';
-import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+import { 
+  AppBar, 
+  Box, 
+  Button, 
+  Container, 
+  GlobalStyles, 
+  IconButton, 
+  Menu, 
+  MenuItem, 
+  Toolbar, 
+  Typography, 
+} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import logo from "../images/Logo.png";
 
 const pages = [{
     link: '/',
@@ -12,6 +24,12 @@ const pages = [{
     value: 'Список відділень',
   },
 ];
+
+const imgGlobalStyles = <GlobalStyles 
+  styles={{
+    '.logo': { width: "100%" },
+  }} 
+/>;
 
 export const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -32,19 +50,18 @@ export const Header = () => {
             component={RouterLink} 
             to="/"
             sx={{
-              mr: 2,
+              width: '80px',
+              p: 0,
+              m: '10px 20px 10px 0',
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            {imgGlobalStyles}
+            <img src={logo} alt="Logo Tracking" className="logo" />
           </Button>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ position: 'absolute', display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -86,23 +103,26 @@ export const Header = () => {
             </Menu>
           </Box>
           
-          <Button
-            component={RouterLink} 
-            to="/"
-            sx={{
-              mr: 2,
+          <Box sx={{
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              justifyContent: 'flex-start',
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              justifyContent: 'center',
             }}
           >
-            LOGO
-          </Button>
+            <Button
+              component={RouterLink} 
+              to="/"
+              sx={{
+                width: '50px',
+                p: 0,
+                m: '10px auto',
+                textDecoration: 'none',
+              }}
+            >
+              {imgGlobalStyles}
+              <img src={logo} alt="Logo Tracking" className="logo" />
+            </Button>
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
