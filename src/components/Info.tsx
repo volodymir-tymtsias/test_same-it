@@ -76,12 +76,12 @@ export const Info = () => {
         
           <Typography variant="body1" mb={1}>
             <b>Відправлено: </b>
-            {statusDocuments[0].WarehouseSender + ', ' + statusDocuments[0].CitySender}
+            {`${statusDocuments[0].WarehouseSender}, ${statusDocuments[0].CitySender}`}
           </Typography>
         
           <Typography variant="body1">
             <b>Отримано: </b>
-            {statusDocuments[0].WarehouseRecipient + ', ' + statusDocuments[0].CityRecipient}
+            {`${statusDocuments[0].WarehouseRecipient}, ${statusDocuments[0].CityRecipient}`}
           </Typography>
         </>
       )}
